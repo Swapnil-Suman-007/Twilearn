@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages and Appointments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./teacherdashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#teacher-search">Search Teacher</a></li>
+                <li><button onclick="logout()">Logout</button></li>
+                
+               
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Messages and Appointments</h1>
+
+    <div class="dropdown">
+        <label for="teacher-dropdown">Select a Teacher:</label>
+        <select id="teacher-dropdown">
+            <option value="" selected disabled>Select a Teacher</option> <!-- Default option -->
+            <!-- Populate this dropdown with teacher names from Firebase -->
+        </select>
+        <button onclick="displayTeacherInfo()">Select</button>
+    </div>
+
+    <div id="teacher-info"></div>
+    
+    <div id="manage-appointments">
+        <h2>Manage Appointments:</h2>
+        <br>
+        <button onclick="yoyo()">Manage</button>
+        
+    </div>
+    <div id="datetime" style="text-align: center;"></div>
+    
+    <footer>
+        <div class="footer-content">
+            <ul class="social-media-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>&#169; 2023 Raj Public School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="./teacherdsb.js"></script>
+</body>
+</html>

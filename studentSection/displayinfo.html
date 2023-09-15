@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ecf0f1;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #studentInfo {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    #studentInfo h2 {
+        color: #333;
+    }
+
+    #studentInfo p {
+        margin: 5px 0;
+    }
+    footer {
+    background-color: #007bff; /* Add transparency for an overlay effect */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute; /* Set the footer to absolute position */
+    bottom: 0; /* Position at the bottom of the viewport */
+}
+
+.social-media-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display social media links horizontally */
+    justify-content: center; /* Center the links horizontally */
+}
+
+.social-media-links li {
+    margin-right: 10px;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s; /* Add a smooth transition for link color */
+}
+</style>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./student.html">Teacher Advice</a></li>
+                <li><a href="./searchteacher.html">Search Teacher</a></li>
+                <li><a href = "#">Check Status of Appointment</a></li>
+                <li> <a  onclick="logout()" class="navbar-link">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Student Data Lookup</h1>
+    <br>
+    <input type="text" id="studentName" placeholder="Enter Student Name">
+    <br>
+    <button onclick="getStudentData()">Get Data</button>
+    <div id="studentInfo"></div>
+    <footer>
+        <div class="footer-content">
+            <ul class="social-media-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>&#169; 2023 Raj Public School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="./displayinfo.js"></script>
+</body>
+</html>
+

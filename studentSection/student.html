@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Public School</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="navbar-link">Teacher's Messages</a>
+            <a href="searchteacher.html" class="navbar-link">Search Teacher</a>
+            <a  onclick="logout()" class="navbar-link">Logout</a>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Your page content goes here -->
+
+        <!-- Message Cards -->
+        <div class="message-card">
+            <p class="card-text">Studies and Sports are equally important.</p>
+            <h3 class="card-title">Rajiv Sir</h3>
+        </div>
+        <br>
+        <div class="message-card">
+            <p class="card-text">Be honest</p>
+            <h3 class="card-title">Manoj Pratap Sir</h3>
+        </div>
+        <br>
+        <div class="message-card">
+            <p class="card-text">You should work hard.</p>
+            <h3 class="card-title">Alokita Mam(head mistress)</h3>
+        </div>
+        <br>
+        <footer>
+            <div class="footer-content">
+                <ul class="social-media-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+                <p>&#169; 2023 Raj Public School. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script>
+             function logout(){
+    window.location.href = "../index.html";
+ }
+     
+        </script>
+    </div>
+</body>
+</html>

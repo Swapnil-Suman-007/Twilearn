@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Raj Public School</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./rlogo1.jpg" alt="Raj Public School"></a>
+            <ul class="nav-links">
+                <li><a href="./index.html">Login</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="about-section">
+        <div class="about-content">
+            <h1>Raj Public School</h1>
+            <h2>The Best School in Ghaziabad</h2>
+            <p>Established in 1995</p>
+        </div>
+    </div>
+
+    <div class="image-slider">
+        <div class="slider-container">
+            <img src="rp1.jpg" alt="Image 1">
+            <img src="rp2.png" alt="Image 2">
+            <img src="rp3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>Discover Our Campus</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/D0UnqGm_miA?si=j9-FQ6_USU6gQUf2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="social-media-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>&#169; 2023 Raj Public School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+       // JavaScript code for the rotating image slider
+const sliderContainer = document.querySelector('.slider-container');
+const images = sliderContainer.querySelectorAll('img');
+let currentIndex = 0;
+
+function nextSlide() {
+    images[currentIndex].style.transform = 'translateX(-100%)';
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.transform = 'translateX(0)';
+}
+
+setInterval(nextSlide, 3000); // Change image every 3 seconds
+
+    </script>
+</body>
+</html>

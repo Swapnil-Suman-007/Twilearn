@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="./admindashboard.css">
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#add-teacher">Add Teacher</a></li>
+            <li><a href="#update-delete-teacher">Update/Delete Teacher</a></li>
+            <li><a href="#approve-student-registration">Approve Student Registration</a></li>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <section id="add-teacher" class="panel">
+        <h2>Add Teacher</h2>
+        <form id="addteacherform" class="form">
+            <div class="form-group">
+                <label for="teacher-name">Name:</label>
+                <input type="text" id="teacher-name" name="teacher-name" required>
+            </div>
+            <div class="form-group">
+                <label for="teacher-department">Department:</label>
+                <input type="text" id="teacher-department" name="teacher-department" required>
+            </div>
+            <div class="form-group">
+                <label for="teacher-subject">Subject:</label>
+                <input type="text" id="teacher-subject" name="teacher-subject" required>
+            </div>
+            <button type="submit">Add Teacher</button>
+        </form>
+    </section>
+
+    <section id="update-delete-teacher" class="panel">
+        <h2>Update/Delete Teacher</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Subject</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="teachers-table">
+                <!-- Teacher data will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="approve-student-registration" class="panel">
+        <h2>Approve Student Registration</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="students-table">
+                <!-- Pending student registration data will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <ul class="social-media-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>&#169; 2023 Raj Public School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="./admindashboard.js"></script>
+</body>
+</html>

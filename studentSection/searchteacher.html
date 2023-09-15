@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Search and Booking</title>
+    <link rel="stylesheet" href="./extrastyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./student.html">Teacher Advice</a></li>
+                <li><a href="#teacher-search">Search Teacher</a></li>
+                <li><a href = "./displayinfo.html">Check Status of Appointment</a></li>
+                <li> <a  onclick="logout()" class="navbar-link">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Teacher Search and Booking</h1>
+    
+    <!-- Teacher Search Section -->
+    <section id="teacher-search">
+        <h2>Search for a Teacher</h2>
+        <br>
+        <label for="teacher-dropdown">Select a Teacher:</label>
+        <br>
+        <select id="teacher-dropdown">
+            
+        </select>
+        <button onclick="searchTeacher()">Search</button>
+    </section>
+    
+    <!-- Appointment Booking Section -->
+    <section id="appointment-booking" style="display: none;">
+        <h2>Book an Appointment</h2>
+        <br>
+        <label for="appointment-date">Select a Date:</label>
+        <br>
+        <input type="date" id="appointment-date">
+        <label for="appointment-date">Student Name:</label>
+        <input type="text" id="student-name">
+        <button onclick="bookAppointment()">Book Appointment</button>
+    </section>
+    
+    <!-- Message Sending Section -->
+    <section id="message-sending" style="display: none;">
+        <h2>Send a Message to the Selected Teacher</h2>
+        <br>
+        <label for="message">Message:</label>
+        <br>
+        <textarea id="message" rows="4" cols="50"></textarea>
+        <label for="student-name-msg">Student Name:</label>
+        <input type="text" id="student-name-msg">
+        <button onclick="sendMessage()">Send Message</button>
+    </section>
+<br>
+    <footer>
+        <div class="footer-content">
+            <ul class="social-media-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p>&#169; 2023 Raj Public School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="./searchteacher.js"></script>
+</body>
+</html>
